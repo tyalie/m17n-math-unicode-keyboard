@@ -18,14 +18,14 @@ Thank you unicodeit for your contribution.
 ## Setup
 
 1. Make sure that you're using the ibus input system. The easiest way is to check `ps aux | grep ibus` for any processes running.
-  - an alternative in Gnome is "Settings →  Region & Language →  Gear next to "Input Sources"
+    - an alternative in Gnome is "Settings →  Region & Language →  Gear next to "Input Sources"
 2. Install the m17n ibus package, it currently is in the aptitude under `ibus-m17n` ([launchpad](https://launchpad.net/ubuntu/+source/ibus-m17n))
 3. adapt and execute the `keyboard-generator` script
-  - as of right now only the `REPLACEMENT` variable was mapped
+    - as of right now only the `REPLACEMENT` variable was mapped
 4. move the generated file into the `/usr/share/m17n/` directory
 5. restart ibus (`ibus restart`)
 6. insert the new input method under Gnome's "Input Sources"
-  - you probably need to select "Others" at the bottom of the list
+    - you probably need to select "Others" at the bottom of the list
 
 
 ## How to use?
