@@ -2,6 +2,7 @@
 
 import math_map as m
 from string import Template
+import json
 
 dic = {
         "title": "Math: Latex",
@@ -11,6 +12,9 @@ dic = {
 }
 
 map_template = Template('    ("${src}"   "${to}")')
+
+def escape(s: str):
+    return json.dumps(s).strip('"')
 
 
 with open("template.mim", "r") as f:
@@ -22,6 +26,9 @@ equals = 0
 
 for s, t in m.REPLACEMENTS:
     s = s.lstrip("\\")
+    s = escape(s)
+    t = escape(t)
+
     if s == t or t.strip() == "":
         equals += 1
         continue
