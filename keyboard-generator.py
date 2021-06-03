@@ -14,7 +14,7 @@ dic = {
 map_template = Template('    ("${src}"   "${to}")')
 
 def escape(s: str):
-    return json.dumps(s).strip('"')
+    return json.dumps(s, ensure_ascii=False).strip('"')
 
 
 with open("template.mim", "r") as f:
