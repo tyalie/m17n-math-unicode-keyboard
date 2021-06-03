@@ -28,4 +28,10 @@ Thank you unicodeit for your contribution.
   - you probably need to select "Others" at the bottom of the list
 
 
+## How to use?
 
+After the keyboard input appears in your language list you can simply select it and start typing out your commands. For easier use I've removed the leading `\` from all commands. The ibus input also has the limitation that you cannot remove a character when you hit the wrong key. You would need to start from the beginning then.
+
+Example
+- `n in mathbb{N} Rightarrow n in mathbb{Q}`: n ∈ ℕ ⇒ n ∈ ℚ
+- `n nsubseteq emptyset`: n ⊈ ∅
