@@ -24,11 +24,11 @@ map_strings = []
 
 equals = 0
 
-for os, t in m.REPLACEMENTS:
+for os, t in (m.REPLACEMENTS + m.COMBININGMARKS + m.SUBSUPERSCRIPTS):
     s = os.lstrip("\\")
     
-    # remove all non commands, commands with same output and with empty target
-    if not os.startswith("\\") or s == t or t.strip() == "":
+    # commands with same output and with empty target
+    if s == t or t.strip() == "":
         equals += 1
         continue
 
@@ -36,6 +36,7 @@ for os, t in m.REPLACEMENTS:
     t = escape(t)
 
     map_strings.append(map_template.substitute(src=s, to=t))
+
 
 print(f"Mapped {len(map_strings)} symbols, skipped {equals}")
 
