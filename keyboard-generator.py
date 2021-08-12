@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 import math_map as m
+import additional_math_map as am
 from string import Template
 import json
 
@@ -13,6 +14,7 @@ dic = {
 
 map_template = Template('    ("${src}"   "${to}")')
 
+
 def escape(s: str):
     return json.dumps(s, ensure_ascii=False).strip('"')
 
@@ -24,9 +26,9 @@ map_strings = []
 
 equals = 0
 
-for os, t in (m.REPLACEMENTS + m.COMBININGMARKS + m.SUBSUPERSCRIPTS):
+for os, t in (m.REPLACEMENTS + m.COMBININGMARKS + m.SUBSUPERSCRIPTS + am.CUSTOM_SYMBOLS):
     s = os.lstrip("\\")
-    
+
     # commands with same output and with empty target
     if s == t or t.strip() == "":
         equals += 1
