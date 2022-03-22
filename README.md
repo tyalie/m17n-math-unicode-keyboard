@@ -22,7 +22,7 @@ Thank you unicodeit for your contribution.
 2. Install the m17n ibus package, it currently is in the aptitude under `ibus-m17n` ([launchpad](https://launchpad.net/ubuntu/+source/ibus-m17n))
 3. adapt and execute the `keyboard-generator` script
     - as of right now only the `REPLACEMENT` variable was mapped
-4. move the generated file into the `/usr/share/m17n/` directory
+4. move the generated file into the `/usr/share/m17n/` or `~/.m17n.d/` directory
 5. restart ibus (`ibus restart`)
 6. insert the new input method under Gnome's "Input Sources"
     - you probably need to select "Others" at the bottom of the list
