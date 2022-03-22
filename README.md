@@ -35,3 +35,8 @@ After the keyboard input appears in your language list you can simply select it 
 Example
 - `n in mathbb{N} Rightarrow n in mathbb{Q}`: n ∈ ℕ ⇒ n ∈ ℚ
 - `n nsubseteq emptyset`: n ⊈ ∅
+
+
+## Issues 
+
+Entering `{` on a German keyboard doesn't work as `{` requires <kbd>AltGr</kbd>, which interrupts the current input.
